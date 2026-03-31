@@ -3,8 +3,8 @@ using namespace std;
 
 //Deklarasi variabel global
 int KodeJurusan;
-string namaJurusan;
-string statusKuota;
+string NamaJurusan;
+string StatusKuota;
 
 //Prosedur Input
 void input( ) {
@@ -16,4 +16,29 @@ void input( ) {
     cout<< "-----------------------------------"<< endl;
     cout<< "Masukkan kode Jurusan (1-4): ";
     cin>> KodeJurusan;
+}
+
+//Prosedur untuk pengecekan kondisi
+void pilihanJurusan( ) {
+    switch (KodeJurusan) {
+        case 1:
+            NamaJurusan = "Teknologi Informasi";
+            StatusKuota = "Tersedia (9 Kursi)";
+            break;
+        case 2:
+            NamaJurusan = "Teknik Mesin";
+            StatusKuota = "Kuota Penuh!";
+            break;
+        case 3:
+            NamaJurusan = "Sistem Informasi";
+            StatusKuota = "Tersedia (5 Kursi)";
+            break;
+        case 4:
+            NamaJurusan = "Ilmu Komunikasi";
+            StatusKuota = "Tersedia (1 Kursi)";
+            break;
+        default:
+            NamaJurusan = "Tidak Diketahui";
+            StatusKuota = "Error: Kode Tidak Valid";
+    }
 }
