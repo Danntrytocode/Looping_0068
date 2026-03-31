@@ -12,5 +12,11 @@ int main(){
 
     rerata = (nilB+nilM)/2;
 
-
+    //Menggunakan "&&"
+    if ((rerata >= 60) && (nilM >= 70))
+        status = "LULUS";
+    else
+        status = "TIDAK LULUS";
+    
+    cout<<"Status Kelulusan ="<<status<<" ,dengan nilai rata-rata ="<<rerata<< endl;
 }
